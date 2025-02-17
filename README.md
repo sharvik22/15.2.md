@@ -121,7 +121,7 @@ echo "<html><h1>My cool web-server</h1></html>" > index.html
 ![image](https://github.com/user-attachments/assets/bbc280b0-3e65-4f2b-851b-de9802f52fc9)
 
 
-6) Доп. проверка работы балансировщика: я настроил подключение ко все ВМ по ssh, изменил страницу index.hnml на всех ВМ и через curl смотрел запросы.
+6) Доп. проверка работы балансировщика не в этот раз, но на этом коде terraform: я настроил подключение ко все ВМ по ssh, изменил страницу index.hnml на всех ВМ и через curl смотрел запросы.
 
 ![image](https://github.com/user-attachments/assets/e1ff6082-15b9-49e1-bc0c-42b2b03e0407)
 
