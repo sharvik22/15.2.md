@@ -83,7 +83,7 @@ echo "<html><h1>My cool web-server</h1></html>" > index.html
 
 1) проверяю конфиг - terraform init.
 
-2) создаю  - terraform apply.
+2) запускаю выполнени  - terraform apply.
 
 3) сделал вывод IP адресов (outputs.tf)
 
