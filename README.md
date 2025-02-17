@@ -81,9 +81,65 @@ echo "<html><h1>My cool web-server</h1></html>" > index.html
 
 ## Решение 1. Yandex Cloud
 
+1) проверяю конфиг - terraform init.
+
+2) создаю  - terraform apply.
+
+3) сделал вывод IP адресов (outputs.tf)
+
+![image](https://github.com/user-attachments/assets/7c850603-9a5b-4f07-8262-79ab1e28b94a)
+
+4) настроил утилиту yc, проверяю выполнение кода через cloud и yc
+
+![image](https://github.com/user-attachments/assets/a2178cd0-8d55-465d-ba6e-7e1403f9ebd6)
 
 
+![image](https://github.com/user-attachments/assets/b695e6b5-c3d7-4ec5-967c-c9c3c7b6a5b5)
 
+![image](https://github.com/user-attachments/assets/0c57c517-dcf6-4882-bcd0-a81e962c5a64)
+
+![image](https://github.com/user-attachments/assets/749c2dba-aa2d-4b0a-8e80-f1249454d21a)
+
+![image](https://github.com/user-attachments/assets/e0254d2e-884a-49c1-a0e2-a132cee608fe)
+
+![image](https://github.com/user-attachments/assets/01828455-7aed-4dcb-b254-95d4050005af)
+
+![image](https://github.com/user-attachments/assets/2de89a32-3617-496a-8dd8-c305a03c417b)
+
+![image](https://github.com/user-attachments/assets/c0432328-a2c6-4b44-8bb1-098c333d5c0d)
+
+5) Проверяю работу Object Storage и Apache 2 на 80 порту на всех ВМ.
+
+![image](https://github.com/user-attachments/assets/294e791c-55c1-4f63-a49f-1d6a27b55166)
+
+![image](https://github.com/user-attachments/assets/5a953e21-4156-4ef5-82a2-05f0209ae883)
+
+![image](https://github.com/user-attachments/assets/303f426d-3ff3-49cd-9feb-2b94bc7426db)
+
+5) Проверяю работу балансировщика.
+
+![image](https://github.com/user-attachments/assets/bbc280b0-3e65-4f2b-851b-de9802f52fc9)
+
+
+6) Доп. проверка работы балансировщика: я настроил подключение ко все ВМ по ssh, изменил страницу index.hnml на всех ВМ и через curl смотрел запросы.
+
+![image](https://github.com/user-attachments/assets/e1ff6082-15b9-49e1-bc0c-42b2b03e0407)
+
+видно, что запросы идут на разные ВМ.
+
+7) Проверка Healthcheck ВМ (каждые 10 секунд балансировщик отправляет HTTP-запрос на виртуальные машины, если ответ не пришел в течение 5 секунд, проверка считается неудачной, в ином случае успешно.
+
+Выключил 1 ВМ
+
+![image](https://github.com/user-attachments/assets/f1b9418e-5073-453b-8549-66dfbb4ed111)
+
+Балансировщик работает
+
+![image](https://github.com/user-attachments/assets/52eff5cf-a691-47a4-9b9d-d08eb8a8ec48)
+
+Современем ВМ восстанавливается
+
+![image](https://github.com/user-attachments/assets/167ba825-a50e-47e4-8d82-47dee77bed24)
 
 ---
 
