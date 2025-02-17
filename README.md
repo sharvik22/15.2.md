@@ -114,7 +114,7 @@ echo "<html><h1>My cool web-server</h1></html>" > index.html
 
 ![image](https://github.com/user-attachments/assets/5a953e21-4156-4ef5-82a2-05f0209ae883)
 
-![image](https://github.com/user-attachments/assets/303f426d-3ff3-49cd-9feb-2b94bc7426db)
+![image](https://github.com/user-attachments/assets/203ae002-1d72-4206-b646-99c1805a3d8b)
 
 5) Проверяю работу балансировщика.
 
